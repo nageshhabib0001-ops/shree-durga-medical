@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shree Durga Medical and General Store — Trusted Since 20+ Years | Flat 10% OFF</title>
+<meta name="description" content="Shree Durga Medical and General Store, owned by Ganesh Habib — 20+ years of trusted pharmacy service. Flat 10% discount on all medicines. Drive-through pickup & WhatsApp ordering.">
+<style>
+  :root{
+    --teal:#0d8a84; --teal-dark:#0a6e69; --teal-light:#e6f4f3;
+    --orange:#f4772e; --orange-dark:#d95f1a;
+    --ink:#1b2b34; --muted:#5f707a; --line:#e3eaee;
+    --bg:#f6f9fa; --white:#ffffff; --green:#1aa14a; --blue:#1a7fc4;
+    --shadow:0 2px 10px rgba(16,50,60,.08); --shadow-lg:0 8px 28px rgba(16,50,60,.14);
+    --radius:12px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+  img{max-width:100%;display:block}
+  a{text-decoration:none;color:inherit}
+  .container{max-width:1200px;margin:0 auto;padding:0 16px}
+
+  /* ---------- Announcement bar ---------- */
+  .announce{background:linear-gradient(90deg,var(--teal-dark),var(--teal));color:#fff;text-align:center;font-size:14px;padding:8px 12px;font-weight:600;letter-spacing:.2px}
+  .announce span{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:20px;padding:1px 10px;margin:0 6px}
+
+  /* ---------- Header ---------- */
+  header{background:#fff;box-shadow:var(--shadow);position:sticky;top:0;z-index:100}
+  .header-inner{display:flex;align-items:center;gap:18px;padding:12px 0}
+  .logo{display:flex;align-items:center;gap:10px;cursor:pointer;flex-shrink:0}
+  .logo-mark{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--teal),var(--teal-dark));display:flex;align-items:center;justify-content:center}
+  .logo-text b{font-size:18px;color:var(--teal-dark);display:block;line-height:1.1}
+  .logo-text small{font-size:11px;color:var(--muted);letter-spacing:.5px}
+  .search-box{flex:1;display:flex;align-items:center;background:var(--bg);border:1.5px solid var(--line);border-radius:10px;padding:0 12px;max-width:560px}
+  .search-box svg{flex-shrink:0}
+  .search-box input{border:none;outline:none;background:transparent;width:100%;padding:11px 10px;font-size:14.5px;color:var(--ink)}
+  .header-actions{display:flex;align-items:center;gap:10px;margin-left:auto}
+  .btn{display:inline-flex;align-items:center;gap:8px;border:none;cursor:pointer;font-size:14px;font-weight:600;border-radius:10px;padding:10px 16px;transition:.2s}
+  .btn-cart{background:var(--teal);color:#fff;position:relative}
+  .btn-cart:hover{background:var(--teal-dark)}
+  .cart-count{position:absolute;top:-7px;right:-7px;background:var(--orange);color:#fff;font-size:11px;font-weight:700;min-width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;padding:0 5px;border:2px solid #fff}
+  .btn-wa{background:#25d366;color:#fff}
+  .btn-wa:hover{background:#1eb857}
+  .nav-bar{border-top:1px solid var(--line);background:#fff}
+  .nav-bar ul{display:flex;list-style:none;gap:4px;overflow-x:auto}
+  .nav-bar a{display:block;padding:11px 14px;font-size:14px;color:var(--muted);font-weight:600;white-space:nowrap;border-bottom:3px solid transparent}
+  .nav-bar a:hover,.nav-bar a.active{color:var(--teal-dark);border-bottom-color:var(--teal)}
+
+  /* ---------- Hero ---------- */
+  .hero{background:linear-gradient(120deg,#0a6e69 0%,#0d8a84 55%,#13a39b 100%);color:#fff;padding:52px 0 60px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;right:-80px;top:-80px;width:340px;height:340px;border-radius:50%;background:rgba(255,255,255,.07)}
+  .hero::before{content:"";position:absolute;right:120px;bottom:-120px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.06)}
+  .hero-grid{display:flex;align-items:center;gap:40px;position:relative;z-index:1}
+  .hero-text{flex:1.2}
+  .hero-badge{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);border-radius:20px;padding:5px 14px;font-size:13px;font-weight:600;margin-bottom:16px}
+  .hero h1{font-size:40px;line-height:1.15;margin-bottom:14px}
+  .hero h1 em{font-style:normal;color:#ffd9a8}
+  .hero p{font-size:16.5px;opacity:.92;max-width:520px;margin-bottom:26px;line-height:1.6}
+  .hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+  .btn-white{background:#fff;color:var(--teal-dark)}
+  .btn-white:hover{background:#eef7f6}
+  .btn-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.7)}
+  .btn-outline:hover{background:rgba(255,255,255,.12)}
+  .hero-card{flex:1;background:rgba(255,255,255,.12);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.25);border-radius:18px;padding:26px;max-width:380px}
+  .hero-card h3{font-size:17px;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+  .hero-card li{list-style:none;display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px dashed rgba(255,255,255,.25);font-size:14.5px}
+  .hero-card li:last-child{border:none}
+  .hero-card .ic{width:34px;height:34px;border-radius:9px;background:rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .hours-box{margin-top:14px;background:rgba(0,0,0,.15);border-radius:10px;padding:10px 14px;font-size:13px;line-height:1.7}
+  .hours-box b{display:block;font-size:13.5px;margin-bottom:2px}
+
+  /* ---------- Sections ---------- */
+  section{padding:48px 0}
+  .sec-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
+  .sec-head h2{font-size:26px}
+  .sec-head .sub{color:var(--muted);font-size:14px;margin-top:4px}
+  .link-more{color:var(--teal);font-weight:700;font-size:14px}
+
+  /* ---------- Categories ---------- */
+  .cat-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+  .cat-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:18px 12px;text-align:center;cursor:pointer;transition:.2s;border:1.5px solid transparent}
+  .cat-card:hover{transform:translateY(-4px);border-color:var(--teal);box-shadow:var(--shadow-lg)}
+  .cat-card .ic{width:54px;height:54px;margin:0 auto 10px;border-radius:14px;background:var(--teal-light);display:flex;align-items:center;justify-content:center}
+  .cat-card b{font-size:13.5px;display:block}
+  .cat-card small{color:var(--muted);font-size:11.5px}
+
+  /* ---------- Product cards ---------- */
+  .prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .prod-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:14px;display:flex;flex-direction:column;transition:.2s;border:1.5px solid transparent;cursor:pointer}
+  .prod-card:hover{transform:translateY(-4px);border-color:var(--teal);box-shadow:var(--shadow-lg)}
+  .prod-img{background:#f4f8f9;border-radius:10px;padding:14px;margin-bottom:12px;position:relative}
+  .off-badge{position:absolute;top:8px;left:8px;background:var(--orange);color:#fff;font-size:11px;font-weight:700;padding:3px 8px;border-radius:6px}
+  .rx-badge{position:absolute;top:8px;right:8px;background:#fff;color:var(--orange-dark);border:1px solid var(--orange);font-size:10px;font-weight:800;padding:2px 6px;border-radius:6px}
+  .prod-name{font-size:14px;font-weight:700;line-height:1.35;min-height:38px}
+  .prod-pack{font-size:12px;color:var(--muted);margin:4px 0 10px}
+  .price-row{display:flex;align-items:baseline;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+  .mrp{font-size:12.5px;color:var(--muted);text-decoration:line-through}
+  .price{font-size:17px;font-weight:800;color:var(--teal-dark)}
+  .save-tag{font-size:11px;color:var(--green);font-weight:700}
+  .btn-add{margin-top:auto;background:var(--teal);color:#fff;border:none;border-radius:9px;padding:10px;font-size:13.5px;font-weight:700;cursor:pointer;transition:.2s}
+  .btn-add:hover{background:var(--teal-dark)}
+  .no-results{grid-column:1/-1;text-align:center;color:var(--muted);padding:40px 0;font-size:15px}
+
+  /* ---------- Featured product (PharmEasy style) ---------- */
+  .featured{background:#fff;border-radius:16px;box-shadow:var(--shadow);padding:30px;display:grid;grid-template-columns:1fr 1.2fr;gap:36px}
+  .feat-img{background:#f4f8f9;border-radius:12px;padding:26px;display:flex;align-items:center;justify-content:center}
+  .feat-info h1{font-size:24px;margin-bottom:6px}
+  .feat-info .pack{color:var(--muted);font-size:14px;margin-bottom:16px}
+  .feat-price-box{background:var(--teal-light);border-radius:12px;padding:16px 18px;margin-bottom:16px}
+  .feat-price-row{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .feat-price-row .mrp{font-size:15px}
+  .feat-price{font-size:28px;font-weight:800;color:var(--teal-dark)}
+  .feat-off{background:var(--orange);color:#fff;font-size:12px;font-weight:800;padding:3px 9px;border-radius:6px}
+  .per-unit{font-size:12.5px;color:var(--muted);margin-top:6px}
+  .trust-row{display:flex;gap:18px;flex-wrap:wrap;margin:16px 0;font-size:12.5px;color:var(--muted)}
+  .trust-row span{display:flex;align-items:center;gap:6px;font-weight:600}
+  .feat-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+  .btn-lg{padding:13px 22px;font-size:15px;border-radius:11px}
+  .btn-orange{background:var(--orange);color:#fff}
+  .btn-orange:hover{background:var(--orange-dark)}
+  .btn-blue{background:var(--blue);color:#fff}
+  .btn-blue:hover{background:#15689c}
+  .feat-note{margin-top:14px;font-size:12px;color:var(--muted);background:#fff7f0;border:1px dashed var(--orange);border-radius:9px;padding:9px 12px}
+  .feat-tabs{margin-top:24px}
+  .feat-tabs details{border-top:1px solid var(--line);padding:12px 4px}
+  .feat-tabs summary{font-weight:700;font-size:14.5px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+  .feat-tabs summary::after{content:"+";font-size:20px;color:var(--teal)}
+  .feat-tabs details[open] summary::after{content:"−"}
+  .feat-tabs p{font-size:13.5px;color:var(--muted);line-height:1.65;margin-top:8px}
+
+  /* ---------- About ---------- */
+  .about{background:linear-gradient(120deg,#0a6e69,#0d8a84);border-radius:18px;color:#fff;padding:40px;display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center}
+  .avatar{width:150px;height:150px;border-radius:50%;background:rgba(255,255,255,.14);border:3px solid rgba(255,255,255,.4);display:flex;align-items:center;justify-content:center;font-size:44px;font-weight:800;letter-spacing:1px}
+  .about h2{font-size:26px;margin-bottom:10px}
+  .about p{opacity:.92;line-height:1.7;font-size:15px;max-width:640px}
+  .stats{display:flex;gap:34px;margin-top:22px;flex-wrap:wrap}
+  .stats b{font-size:28px;display:block}
+  .stats small{opacity:.85;font-size:12.5px}
+
+  /* ---------- Services ---------- */
+  .srv-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .srv-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;text-align:center;transition:.2s;border:1.5px solid transparent}
+  .srv-card:hover{transform:translateY(-4px);border-color:var(--teal)}
+  .srv-card .ic{width:58px;height:58px;margin:0 auto 14px;border-radius:16px;background:var(--teal-light);display:flex;align-items:center;justify-content:center}
+  .srv-card b{font-size:15.5px;display:block;margin-bottom:6px}
+  .srv-card p{font-size:13px;color:var(--muted);line-height:1.55}
+
+  /* ---------- Timings banner ---------- */
+  .hours-strip{background:#fff;border-radius:16px;box-shadow:var(--shadow);padding:26px 30px;display:flex;gap:30px;align-items:center;flex-wrap:wrap}
+  .hours-strip h2{font-size:22px;margin-right:auto}
+  .hours-col{font-size:14px;line-height:1.7}
+  .hours-col b{display:block;color:var(--teal-dark);font-size:15px;margin-bottom:2px}
+  .open-now{background:var(--green);color:#fff;font-size:12px;font-weight:700;padding:3px 10px;border-radius:14px;margin-left:6px}
+
+  /* ---------- Contact / footer ---------- */
+  footer{background:#12333a;color:#cfe0e4;padding:44px 0 0;margin-top:20px}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1.2fr 1fr;gap:30px;padding-bottom:30px}
+  .foot-grid h4{color:#fff;font-size:15px;margin-bottom:14px}
+  .foot-grid p,.foot-grid li{font-size:13.5px;line-height:1.9;list-style:none}
+  .foot-grid a{color:#9fd8d3}
+  .foot-grid a:hover{color:#fff}
+  .foot-hours{font-size:13.5px;line-height:1.9}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding:16px 0;font-size:12px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:#8fb0b8}
+  .disclaimer{background:#0d282e;padding:14px 0;font-size:11.5px;color:#7fa3ab;line-height:1.6}
+
+  /* ---------- Cart drawer ---------- */
+  .drawer-bg{position:fixed;inset:0;background:rgba(10,30,35,.5);opacity:0;pointer-events:none;transition:.25s;z-index:200}
+  .drawer{position:fixed;top:0;right:-400px;width:min(400px,100%);height:100%;background:#fff;z-index:201;transition:right .28s ease;display:flex;flex-direction:column;box-shadow:-6px 0 24px rgba(0,0,0,.15)}
+  body.cart-open .drawer{right:0}
+  body.cart-open .drawer-bg{opacity:1;pointer-events:auto}
+  .drawer-head{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:1px solid var(--line)}
+  .drawer-head b{font-size:18px}
+  .drawer-close{background:none;border:none;font-size:26px;cursor:pointer;color:var(--muted);line-height:1}
+  .drawer-body{flex:1;overflow-y:auto;padding:16px 20px}
+  .cart-item{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+  .cart-item img{width:58px;height:58px;background:#f4f8f9;border-radius:9px;padding:6px;flex-shrink:0}
+  .cart-item .ci-name{font-size:13.5px;font-weight:700}
+  .cart-item .ci-price{font-size:13px;color:var(--teal-dark);font-weight:700;margin-top:2px}
+  .qty{display:flex;align-items:center;gap:8px;margin-left:auto}
+  .qty button{width:26px;height:26px;border:1.5px solid var(--teal);background:#fff;color:var(--teal);border-radius:7px;font-size:15px;font-weight:700;cursor:pointer}
+  .cart-empty{text-align:center;color:var(--muted);padding:60px 0;font-size:14.5px}
+  .drawer-foot{padding:16px 20px;border-top:1px solid var(--line);background:#fafdfd}
+  .tot-row{display:flex;justify-content:space-between;font-size:14px;padding:4px 0;color:var(--muted)}
+  .tot-row.grand{font-size:17px;font-weight:800;color:var(--ink);border-top:1px dashed var(--line);margin-top:8px;padding-top:10px}
+  .drawer-foot .btn{width:100%;justify-content:center;margin-top:10px}
+  .pickup-note{font-size:12px;color:var(--muted);text-align:center;margin-top:8px}
+
+  /* ---------- Floating WhatsApp ---------- */
+  .wa-float{position:fixed;bottom:22px;right:22px;width:56px;height:56px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.25);z-index:90;transition:.2s}
+  .wa-float:hover{transform:scale(1.08)}
+
+  /* ---------- Toast ---------- */
+  .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--ink);color:#fff;padding:11px 20px;border-radius:10px;font-size:14px;z-index:300;transition:.3s;opacity:0}
+  .toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+
+  /* ---------- Responsive ---------- */
+  @media(max-width:1024px){
+    .cat-grid{grid-template-columns:repeat(3,1fr)}
+    .prod-grid{grid-template-columns:repeat(3,1fr)}
+    .srv-grid{grid-template-columns:repeat(2,1fr)}
+    .foot-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:768px){
+    .header-inner{flex-wrap:wrap}
+    .search-box{order:3;max-width:100%;flex-basis:100%}
+    .hero-grid{flex-direction:column}
+    .hero h1{font-size:30px}
+    .hero-card{max-width:100%}
+    .prod-grid{grid-template-columns:repeat(2,1fr)}
+    .featured{grid-template-columns:1fr;padding:20px}
+    .about{grid-template-columns:1fr;text-align:center}
+    .about p{margin:0 auto}
+    .stats{justify-content:center}
+    .hours-strip{flex-direction:column;align-items:flex-start}
+    .btn-wa span{display:none}
+  }
+  @media(max-width:480px){
+    .prod-grid{grid-template-columns:1fr 1fr;gap:10px}
+    .cat-grid{grid-template-columns:repeat(2,1fr)}
+    .srv-grid{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr}
+    .hero h1{font-size:26px}
+  }
+</style>
+<base target="_blank">
+</head>
+<body>
+
+<!-- Announcement -->
+<div class="announce">🎉 FLAT <span>10% OFF</span> ON ALL MEDICINES &nbsp;|&nbsp; 🚗 DRIVE-THROUGH PICKUP AVAILABLE &nbsp;|&nbsp; 📲 ORDER ON WHATSAPP &nbsp;|&nbsp; TRUSTED FOR 20+ YEARS</div>
+
+<!-- Header -->
+<header>
+  <div class="container header-inner">
+    <div class="logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+      <div class="logo-mark">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M9 3h6v6h6v6h-6v6H9v-6H3V9h6V3z" fill="#fff"/></svg>
+      </div>
+      <div class="logo-text"><b>Shree Durga</b><small>MEDICAL &amp; GENERAL STORE</small></div>
+    </div>
+    <div class="search-box">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5f707a" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="searchInput" type="text" placeholder="Search medicines, health products…" oninput="filterProducts(this.value)">
+    </div>
+    <div class="header-actions">
+      <button class="btn btn-cart" onclick="toggleCart(true)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.6"/><circle cx="17" cy="20" r="1.6"/><path d="M3 3h2l2.6 12.2a1.5 1.5 0 0 0 1.5 1.2h7.9a1.5 1.5 0 0 0 1.5-1.2L20 7H6"/></svg>
+        Cart <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <a class="btn btn-wa" href="https://wa.me/918080505031?text=Hello%20Shree%20Durga%20Medical%20and%20General%20Store%2C%20I%20want%20to%20order%20medicines." target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5 13.6c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.4 1.8 2.2 1.3 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.2 1.3z"/></svg>
+        <span>WhatsApp</span>
+      </a>
+    </div>
+  </div>
+  <nav class="nav-bar">
+    <div class="container">
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#bestsellers">Medicines</a></li>
+        <li><a href="#featured">Featured</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#hours">Store Hours</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="home" style="padding:52px 0 60px">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <span class="hero-badge">⭐ Serving the community since 2004</span>
+      <h1>Shree Durga Medical and General Store — <em>20+ Years</em> of Trusted Care</h1>
+      <p>Owned and run by <b>Ganesh Habib</b> — every medicine genuine, every order double-checked. Flat <b>10% discount on all medicines</b>, drive-through pickup, and friendly advice you can trust.</p>
+      <div class="hero-cta">
+        <a href="#bestsellers" class="btn btn-white btn-lg">Shop Medicines</a>
+        <a href="https://wa.me/918080505031?text=Hello%2C%20I%20want%20to%20place%20an%20order." target="_blank" rel="noopener" class="btn btn-outline btn-lg">📲 Order on WhatsApp</a>
+        <a href="https://maps.app.goo.gl/zzZhh6DJtPU1nCXL9" target="_blank" rel="noopener" class="btn btn-outline btn-lg">📍 Get Directions</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>💊 Why families choose us</h3>
+      <ul>
+        <li><span class="ic">🏷️</span> Flat 10% OFF on every medicine, every day</li>
+        <li><span class="ic">🚗</span> Drive-through pickup — order on WhatsApp, collect from your car</li>
+        <li><span class="ic">📋</span> Send your prescription on WhatsApp — we pack it &amp; keep it ready</li>
+        <li><span class="ic">✅</span> 100% genuine, bill on every purchase</li>
+        <li><span class="ic">🩺</span> Free guidance on dosage &amp; substitutes</li>
+      </ul>
+      <div class="hours-box">
+        <b>🕘 Store Hours</b>
+        Mon–Sat: 9:00 AM–2:00 PM &amp; 5:00 PM–11:00 PM<br>
+        Sunday: 9:00 AM–2:00 PM (Evening Closed)
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Categories -->
+<section id="categories">
+  <div class="container">
+    <div class="sec-head"><div><h2>Shop by Category</h2><div class="sub">Everything your family needs, in one place</div></div></div>
+    <div class="cat-grid">
+      <div class="cat-card"><div class="ic">💊</div><b>Tablets &amp; Capsules</b><small>500+ products</small></div>
+      <div class="cat-card"><div class="ic">🧴</div><b>Syrups &amp; Tonics</b><small>150+ products</small></div>
+      <div class="cat-card"><div class="ic">🩹</div><b>First Aid</b><small>80+ products</small></div>
+      <div class="cat-card"><div class="ic">🌡️</div><b>Health Devices</b><small>BP, sugar, thermometers</small></div>
+      <div class="cat-card"><div class="ic">👶</div><b>Baby &amp; Mother Care</b><small>120+ products</small></div>
+      <div class="cat-card"><div class="ic">🧼</div><b>Personal Care</b><small>200+ products</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- Bestsellers -->
+<section id="bestsellers" style="padding-top:10px">
+  <div class="container">
+    <div class="sec-head">
+      <div><h2>Bestselling Medicines</h2><div class="sub">Flat 10% OFF applied on MRP — inclusive of all taxes</div></div>
+      <a class="link-more" href="https://wa.me/918080505031?text=Please%20share%20your%20full%20medicine%20list%20with%20prices." target="_blank" rel="noopener">Order full list on WhatsApp →</a>
+    </div>
+    <div class="prod-grid" id="productGrid"></div>
+  </div>
+</section>
+
+<!-- Featured product (PharmEasy-style detail) -->
+<section id="featured" style="padding-top:10px">
+  <div class="container">
+    <div class="featured">
+      <div class="feat-img">
+        <svg width="240" height="240" viewBox="0 0 240 240" fill="none">
+          <rect x="35" y="60" width="170" height="120" rx="8" fill="#fff" stroke="#c9d6da" stroke-width="3"/>
+          <rect x="35" y="60" width="170" height="26" rx="8" fill="#0d8a84"/>
+          <rect x="48" y="66" width="120" height="14" rx="4" fill="#ffffff" opacity=".85"/>
+          <text x="52" y="118" font-family="Segoe UI, Arial" font-size="16" fill="#5f707a">Paracetamol</text>
+          <text x="52" y="140" font-family="Segoe UI, Arial" font-size="16" fill="#5f707a">Tablets IP</text>
+          <rect x="52" y="152" width="88" height="20" rx="4" fill="#f4772e"/>
+          <text x="60" y="167" font-family="Segoe UI, Arial" font-size="13" font-weight="bold" fill="#fff">DOLO 650</text>
+          <g transform="translate(52,185)"><rect width="136" height="26" rx="6" fill="#dfe9ec" stroke="#b9c8cd"/>
+            <circle cx="17" cy="13" r="8" fill="#fff" stroke="#b9c8cd"/><circle cx="41" cy="13" r="8" fill="#fff" stroke="#b9c8cd"/><circle cx="65" cy="13" r="8" fill="#fff" stroke="#b9c8cd"/><circle cx="89" cy="13" r="8" fill="#fff" stroke="#b9c8cd"/><circle cx="113" cy="13" r="8" fill="#fff" stroke="#b9c8cd"/></g>
+        </svg>
+      </div>
+      <div class="feat-info">
+        <h1>Dolo 650mg Strip of 15 Tablets</h1>
+        <div class="pack">15 Tablet(s) in Strip &nbsp;•&nbsp; By MICRO LABS</div>
+        <div class="feat-price-box">
+          <div class="feat-price-row">
+            <span class="mrp">MRP ₹33.00</span>
+            <span class="feat-price">₹29.70</span>
+            <span class="feat-off">10% OFF</span>
+          </div>
+          <div class="per-unit">₹1.98/tablet (Inclusive of all taxes) &nbsp;•&nbsp; You save ₹3.30</div>
+        </div>
+        <div class="trust-row">
+          <span>✔️ Genuine &amp; Quality Assured</span>
+          <span>💵 Cash / UPI at Pickup</span>
+          <span>🚗 Drive-Through Ready</span>
+        </div>
+        <div class="feat-actions">
+          <button class="btn btn-orange btn-lg" onclick="addToCart(1)">Add to Cart</button>
+          <a class="btn btn-wa btn-lg" href="https://wa.me/918080505031?text=I%20want%20to%20order%3A%20Dolo%20650mg%20Strip%20of%2015%20Tablets" target="_blank" rel="noopener">Order on WhatsApp</a>
+          <a class="btn btn-blue btn-lg" href="https://maps.app.goo.gl/zzZhh6DJtPU1nCXL9" target="_blank" rel="noopener">📍 Drive-Through Location</a>
+        </div>
+        <div class="feat-note">📋 <b>Prescription (Rx) medicines</b> are dispensed only against a valid doctor's prescription, as per law.</div>
+        <div class="feat-tabs">
+          <details open>
+            <summary>Product Summary</summary>
+            <p>Contains Paracetamol 650 mg. Used for fever and mild to moderate pain relief (headache, body ache, toothache). Always take as directed by your physician. Do not exceed 4 doses in 24 hours.</p>
+          </details>
+          <details>
+            <summary>Storage &amp; Precautions</summary>
+            <p>Store below 30°C, protected from light and moisture. Keep out of reach of children. Do not use after expiry. Inform your doctor about liver/kidney conditions or other medicines you are taking.</p>
+          </details>
+          <details>
+            <summary>Pickup &amp; Drive-Through</summary>
+            <p>Order on WhatsApp (+91 80805 05031) and your medicines will be packed and kept ready. Collect them at our store counter, or use our <b>drive-through pickup</b> — just stop your car at the pickup point, show your order message, and we'll hand it over. No parking, no waiting.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" style="padding-top:10px">
+  <div class="container">
+    <div class="about">
+      <div class="avatar">GH</div>
+      <div>
+        <h2>Ganesh Habib — Pharmacist &amp; Owner</h2>
+        <p>With over <b>20 years of experience</b> in pharmacy and patient care, Ganesh Habib has built Shree Durga Medical and General Store into a place families trust for genuine medicines, honest pricing, and personal attention. From a child's fever to chronic care for elders — every customer gets the right medicine, a proper bill, and clear guidance on how to take it.</p>
+        <div class="stats">
+          <div><b>20+</b><small>Years of Experience</small></div>
+          <div><b>10,000+</b><small>Happy Customers</small></div>
+          <div><b>100%</b><small>Genuine Medicines</small></div>
+          <div><b>10%</b><small>Flat Discount Always</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" style="padding-top:10px">
+  <div class="container">
+    <div class="sec-head"><div><h2>Our Services</h2><div class="sub">More than just a medicine shop</div></div></div>
+    <div class="srv-grid">
+      <div class="srv-card"><div class="ic">🚗</div><b>Drive-Through Pickup</b><p>In a hurry? Order on WhatsApp, drive up to our pickup point, and collect your packed medicines right from your car — no parking needed.</p></div>
+      <div class="srv-card"><div class="ic">📲</div><b>WhatsApp Ordering</b><p>Send a photo of your prescription or medicine list to +91 80805 05031. We confirm the price, pack it, and keep it ready for pickup.</p></div>
+      <div class="srv-card"><div class="ic">🩺</div><b>Dosage Guidance</b><p>20+ years of experience — clear advice on dosage, timing, food interactions &amp; affordable generic substitutes.</p></div>
+      <div class="srv-card"><div class="ic">🧾</div><b>Bills &amp; Insurance Support</b><p>Proper GST bills for every purchase. Help with insurance reimbursement paperwork.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Store Hours -->
+<section id="hours" style="padding-top:10px">
+  <div class="container">
+    <div class="hours-strip">
+      <h2>🕘 Store Hours <span class="open-now" id="openBadge"></span></h2>
+      <div class="hours-col"><b>Monday – Saturday</b>Morning: 9:00 AM – 2:00 PM<br>Evening: 5:00 PM – 11:00 PM</div>
+      <div class="hours-col"><b>Sunday</b>Morning: 9:00 AM – 2:00 PM<br>Evening: Closed</div>
+      <div class="hours-col"><b>Drive-Through</b>Available during all open hours<br>Order first on WhatsApp for fastest pickup</div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="contact">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <h4>Shree Durga Medical and General Store</h4>
+        <p>Your neighbourhood pharmacy for 20+ years, run by Ganesh Habib. Genuine medicines, flat 10% discount, drive-through pickup, and advice you can trust.</p>
+        <p style="margin-top:10px"><a href="https://maps.app.goo.gl/zzZhh6DJtPU1nCXL9" target="_blank" rel="noopener">📍 View store location on Google Maps →</a></p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>📞 <a href="tel:+918080505031">+91 80805 05031</a></li>
+          <li>💬 <a href="https://wa.me/918080505031" target="_blank" rel="noopener">WhatsApp: +91 80805 05031</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Store Hours</h4>
+        <div class="foot-hours">
+          Mon–Sat: 9:00 AM – 2:00 PM<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5:00 PM – 11:00 PM<br>
+          Sunday: 9:00 AM – 2:00 PM<br>
+          Sunday Evening: Closed
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#bestsellers">Medicines</a></li>
+          <li><a href="#services">Drive-Through Pickup</a></li>
+          <li><a href="https://wa.me/918080505031" target="_blank" rel="noopener">Order on WhatsApp</a></li>
+          <li><a href="https://maps.app.goo.gl/zzZhh6DJtPU1nCXL9" target="_blank" rel="noopener">Get Directions</a></li>
+          <li><a href="#about">About Ganesh Habib</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="disclaimer">
+    <div class="container">Disclaimer: The information on this website is for general awareness only and is not a substitute for professional medical advice, diagnosis or treatment. Prescription (Schedule H/H1) medicines are dispensed strictly against a valid prescription from a registered medical practitioner, in compliance with the Drugs and Cosmetics Act. Always consult your doctor before starting, changing or stopping any medicine.</div>
+  </div>
+  <div class="foot-bottom container">
+    <span>© 2026 Shree Durga Medical and General Store. All rights reserved.</span>
+    <span>Drug License No. XX-XXXXXX | GSTIN: XXXXXXXXXXXX</span>
+  </div>
+</footer>
+
+<!-- Cart drawer -->
+<div class="drawer-bg" onclick="toggleCart(false)"></div>
+<aside class="drawer" aria-label="Shopping cart">
+  <div class="drawer-head"><b>Your Cart 🛒</b><button class="drawer-close" onclick="toggleCart(false)" aria-label="Close cart">×</button></div>
+  <div class="drawer-body" id="cartBody"></div>
+  <div class="drawer-foot" id="cartFoot"></div>
+</aside>
+
+<!-- Floating WhatsApp -->
+<a class="wa-float" href="https://wa.me/918080505031?text=Hello%20Shree%20Durga%20Medical%20and%20General%20Store!" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5 13.6c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.4 1.8 2.2 1.3 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.2 1.3z"/></svg>
+</a>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ---------- Product data (MRP -> 10% OFF) ---------- */
+const WA = "918080505031";
+const products = [
+  {id:1, name:"Dolo 650mg Paracetamol Tablets", pack:"Strip of 15 tablets", mrp:33.00, rx:false, emoji:"💊", c1:"#e3f2f1"},
+  {id:2, name:"Crocin Advance 500mg Tablets", pack:"Strip of 20 tablets", mrp:50.00, rx:false, emoji:"💊", c1:"#fdeee3"},
+  {id:3, name:"Azithromycin 500mg Tablets", pack:"Strip of 5 tablets", mrp:119.50, rx:true, emoji:"💊", c1:"#e8f0fe"},
+  {id:4, name:"Cetirizine 10mg Anti-Allergy Tablets", pack:"Strip of 10 tablets", mrp:26.00, rx:false, emoji:"💊", c1:"#eaf6ea"},
+  {id:5, name:"Pan 40mg Pantoprazole Tablets", pack:"Strip of 15 tablets", mrp:137.00, rx:true, emoji:"💊", c1:"#fdeee3"},
+  {id:6, name:"Benadryl Cough Syrup 150ml", pack:"Bottle of 150 ml", mrp:118.00, rx:false, emoji:"🧴", c1:"#fdeee3"},
+  {id:7, name:"Electral ORS Powder (Orange)", pack:"Pack of 5 sachets", mrp:110.00, rx:false, emoji:"🥤", c1:"#eaf6ea"},
+  {id:8, name:"Amoxyclav 625mg Tablets", pack:"Strip of 10 tablets", mrp:204.00, rx:true, emoji:"💊", c1:"#e8f0fe"},
+  {id:9, name:"Digital Thermometer (Flexible Tip)", pack:"1 unit", mrp:249.00, rx:false, emoji:"🌡️", c1:"#fdeee3"},
+  {id:10, name:"Vitamin C + Zinc Chewable Tablets", pack:"Bottle of 60 tablets", mrp:320.00, rx:false, emoji:"🍊", c1:"#eaf6ea"},
+  {id:11, name:"Betadine 10% Ointment 20g", pack:"Tube of 20 g", mrp:98.00, rx:false, emoji:"🩹", c1:"#fdeee3"},
+  {id:12, name:"Metformin 500mg Tablets", pack:"Strip of 20 tablets", mrp:28.50, rx:true, emoji:"💊", c1:"#e8f0fe"},
+];
+const off = m => Math.round(m * 0.90 * 100) / 100;
+const fmt = n => "₹" + n.toFixed(2);
+
+/* ---------- Render products ---------- */
+function prodImgSVG(p){
+  return `<svg viewBox="0 0 120 120" width="100%" height="120"><rect width="120" height="120" rx="10" fill="${p.c1}"/><text x="60" y="72" font-size="46" text-anchor="middle">${p.emoji}</text></svg>`;
+}
+function renderProducts(list){
+  const grid = document.getElementById("productGrid");
+  if(!list.length){ grid.innerHTML = `<div class="no-results">No products found. Try another name, or <a href="https://wa.me/${WA}" target="_blank" style="color:var(--teal);font-weight:700">ask us on WhatsApp</a> — we stock 1000s of items.</div>`; return; }
+  grid.innerHTML = list.map(p => `
+    <div class="prod-card" onclick="addToCart(${p.id})" title="Click to add to cart">
+      <div class="prod-img">
+        <span class="off-badge">10% OFF</span>
+        ${p.rx ? `<span class="rx-badge">℞ Rx</span>` : ``}
+        ${prodImgSVG(p)}
+      </div>
+      <div class="prod-name">${p.name}</div>
+      <div class="prod-pack">${p.pack}</div>
+      <div class="price-row">
+        <span class="mrp">MRP ${fmt(p.mrp)}</span>
+        <span class="price">${fmt(off(p.mrp))}</span>
+        <span class="save-tag">Save ${fmt(p.mrp - off(p.mrp))}</span>
+      </div>
+      <button class="btn-add" onclick="event.stopPropagation();addToCart(${p.id})">Add to Cart</button>
+    </div>`).join("");
+}
+function filterProducts(q){
+  q = q.trim().toLowerCase();
+  renderProducts(q ? products.filter(p => (p.name+" "+p.pack).toLowerCase().includes(q)) : products);
+}
+renderProducts(products);
+
+/* ---------- Cart ---------- */
+const cart = new Map();
+function addToCart(id){
+  cart.set(id, (cart.get(id)||0) + 1);
+  updateCart();
+  const p = products.find(x=>x.id===id);
+  showToast(`✅ ${p.name} added to cart`);
+}
+function changeQty(id, d){
+  const q = (cart.get(id)||0) + d;
+  if(q <= 0) cart.delete(id); else cart.set(id, q);
+  updateCart();
+}
+function cartTotals(){
+  let mrp = 0;
+  cart.forEach((q,id) => { mrp += products.find(p=>p.id===id).mrp * q; });
+  const disc = Math.round(mrp*0.10*100)/100;
+  return {mrp, disc, total: Math.round((mrp-disc)*100)/100};
+}
+function updateCart(){
+  const count = [...cart.values()].reduce((a,b)=>a+b,0);
+  document.getElementById("cartCount").textContent = count;
+  const body = document.getElementById("cartBody"), foot = document.getElementById("cartFoot");
+  if(!count){
+    body.innerHTML = `<div class="cart-empty">🛒<br><br>Your cart is empty.<br>Add medicines to see your 10% savings!</div>`;
+    foot.innerHTML = "";
+    return;
+  }
+  body.innerHTML = [...cart.entries()].map(([id,q]) => {
+    const p = products.find(x=>x.id===id);
+    return `<div class="cart-item">
+      <img src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><rect width="120" height="120" rx="10" fill="${p.c1.replace("#","%23")}"/><text x="60" y="74" font-size="46" text-anchor="middle">${p.emoji}</text></svg>' alt="">
+      <div><div class="ci-name">${p.name}</div><div class="ci-price">${fmt(off(p.mrp))} <s style="color:var(--muted);font-weight:400">${fmt(p.mrp)}</s></div></div>
+      <div class="qty"><button onclick="changeQty(${id},-1)">−</button><b>${q}</b><button onclick="changeQty(${id},1)">+</button></div>
+    </div>`;
+  }).join("");
+  const t = cartTotals();
+  foot.innerHTML = `
+    <div class="tot-row"><span>Total MRP</span><span>${fmt(t.mrp)}</span></div>
+    <div class="tot-row" style="color:var(--green)"><span>Discount (10% OFF)</span><span>− ${fmt(t.disc)}</span></div>
+    <div class="tot-row grand"><span>To Pay at Pickup</span><span>${fmt(t.total)}</span></div>
+    <button class="btn btn-wa btn-lg" onclick="orderOnWhatsApp()">Place Order on WhatsApp</button>
+    <div class="pickup-note">🚗 Drive-through pickup available during store hours</div>`;
+}
+function orderOnWhatsApp(){
+  let msg = "Hello Shree Durga Medical and General Store! I would like to order:%0A%0A";
+  cart.forEach((q,id) => { const p = products.find(x=>x.id===id); msg += `• ${p.name} (${p.pack}) × ${q} — ${fmt(off(p.mrp)*q)}%0A`; });
+  const t = cartTotals();
+  msg += `%0ATotal MRP: ${fmt(t.mrp)}%0ADiscount (10%): − ${fmt(t.disc)}%0ATo Pay: ${fmt(t.total)}%0A%0AI will collect via pickup / drive-through. Please confirm availability.`;
+  window.open(`https://wa.me/${WA}?text=${msg}`,"_blank");
+}
+function toggleCart(open){ document.body.classList.toggle("cart-open", open); }
+updateCart();
+
+/* ---------- Toast ---------- */
+let toastTimer;
+function showToast(msg){
+  const t = document.getElementById("toast");
+  t.textContent = msg; t.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=>t.classList.remove("show"), 2200);
+}
+
+/* ---------- Open/Closed badge (IST) ---------- */
+function updateOpenBadge(){
+  // Store timezone: Asia/Kolkata (UTC+5:30)
+  const now = new Date(new Date().toLocaleString("en-US",{timeZone:"Asia/Kolkata"}));
+  const day = now.getDay(); // 0 = Sunday
+  const mins = now.getHours()*60 + now.getMinutes();
+  const morning = mins >= 540 && mins < 840;          // 9:00–14:00
+  const evening = mins >= 1020 && mins < 1380;         // 17:00–23:00
+  const open = day === 0 ? morning : (morning || evening);
+  const badge = document.getElementById("openBadge");
+  badge.textContent = open ? "OPEN NOW" : "CLOSED NOW";
+  badge.style.background = open ? "var(--green)" : "#c0392b";
+}
+updateOpenBadge();
+setInterval(updateOpenBadge, 60000);
+
+/* ---------- Active nav highlight ---------- */
+const navLinks = document.querySelectorAll(".nav-bar a");
+const sections = [...navLinks].map(a => document.querySelector(a.getAttribute("href"))).filter(Boolean);
+window.addEventListener("scroll", () => {
+  let cur = "#home";
+  sections.forEach(s => { if(window.scrollY >= s.offsetTop - 140) cur = "#" + s.id; });
+  navLinks.forEach(a => a.classList.toggle("active", a.getAttribute("href") === cur));
+}, {passive:true});
+</script>
+</body>
+</html>
